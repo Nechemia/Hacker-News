@@ -1,0 +1,38 @@
+﻿@using HackerNews.Models
+@model IEnumerable<HackerNews.Link>
+
+@{Html.RenderPartial("TablePartial");}
+
+
+
+@*<a href="/home/addlink" class="btn btn-primary">Add Link</a>
+<a href="/Authentication/signup" class="btn btn-success" style="float: right;">Register</a>
+<a href="/Authentication/signin" class="btn btn-danger" style="float: right;">Log In</a>
+<table class="table table-bordered table-hover table-striped table-responsive">
+    <tr>
+        <th>Title</th>
+        <th>Url</th>
+        <th>Amount Of Points</th>
+        <th>UserName</th>
+        <th>Vote</th>
+    </tr>
+    @foreach (var r in Model)
+    {
+
+        <tr>
+            <td><a href="@r.Url">@r.Title</a></td>
+            <td><a href="@r.Url">@r.Url</a></td>
+            <td>@r.UpVotes.Count</td>
+            <td><a href="/home/users?id=@r.UserId">@r.User.UserName</a></td>
+            <td data-id="@r.Id" class="glyphicon glyphicon-thumbs-up vote"></td>
+        </tr>
+    }
+</table>*@
+
+@section scripts
+{
+    <script src="/Scripts/JavaScript1.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-1.9.1.js"></script>
+
+}

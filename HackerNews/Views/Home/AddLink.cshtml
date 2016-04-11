@@ -1,0 +1,10 @@
+﻿@using HackerNews.Models
+@model int
+<form method="post" action="Addlink" >
+
+    Title: <input type="text" name="title"><br>
+    Url: <input type="text" name="url"><br>
+    <input type="hidden" name="id" value="@Model">
+    
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>

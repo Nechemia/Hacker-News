@@ -1,0 +1,32 @@
+﻿@using HackerNews.Models
+@model IEnumerable<HackerNews.Link>
+
+<a href="/home/addlink" class="btn btn-primary">Add Link</a>
+<a href="/Authentication/signup" class="btn btn-success" style="float: right;">Register</a>
+<a href="/Authentication/signin" class="btn btn-danger" style="float: right;">Log In</a>
+<table class="table table-bordered table-hover table-striped table-responsive">
+    <tr>
+        <th>Title</th>
+        <th>Url</th>
+        <th>Amount Of Points</th>
+        <th>UserName</th>
+        <th>Vote</th>
+    </tr>
+    @foreach (var r in Model)
+    {
+
+        <tr>
+            <td><a href="@r.Url">@r.Title</a></td>
+            <td><a href="@r.Url">@r.Url</a></td>
+            <td>@r.UpVotes.Count</td>
+            <td><a href="/user/@r.UserId">@r.User.UserName</a></td>
+            <td data-id="@r.Id" class="glyphicon glyphicon-thumbs-up vote"></td>
+        </tr>
+    }
+
+
+
+
+</table>
+
+
